@@ -1,0 +1,22 @@
+name: Build Backrooms Tale PSP
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: pspdev/pspdev:latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Build EBOOT.PBP
+        run: |
+          cd BackroomsTale_PSP
+          make clean || true
+          make
+          test -f EBOOT.PBP
+      - name: Upload PSP game
+        uses: actions/upload-artifact@v4
+        with:
+          name: BackroomsTale-EBOOT-PBP
+          path: BackroomsTale_PSP/EBOOT.PBP
