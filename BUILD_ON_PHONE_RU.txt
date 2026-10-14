@@ -1,0 +1,9 @@
+Сборка Backrooms Tale на Android через GitHub Actions
+
+1. Создай пустой GitHub-репозиторий.
+2. Загрузи содержимое папки BackroomsTale_GitHubUpload в корень репозитория. Важно: папка .github должна быть в корне, рядом с BackroomsTale_PSP.
+3. Открой Actions -> Build Backrooms Tale PSP -> Run workflow.
+4. После успешной сборки открой запуск workflow и скачай artifact BackroomsTale-EBOOT-PBP.
+5. Из архива возьми EBOOT.PBP и положи в PSP/GAME/BackroomsTale/EBOOT.PBP на устройстве с PPSSPP.
+
+Если сборка упадёт, открой красный шаг и пришли скриншот ошибки. Сборка пока не проверена на сервере.
